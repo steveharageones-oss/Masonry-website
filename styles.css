@@ -1,6 +1,6 @@
 
 :root {
-    --safety-green: #CCFF00; /* Highlighter yellow */
+    --theme-yellow: #FFCE00; /* Standard Banana/Construction Yellow */
     --black: #000000;
     --white: #FFFFFF;
     --text-color: #333333;
@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Super bold, industrial font for a masonry company */
     font-family: 'Arial Black', Impact, sans-serif;
 }
 
@@ -26,10 +25,10 @@ body {
     padding: 0 20px;
 }
 
-/* Header & Navigation */
+/* Header & Navigation - BLACK BACKGROUND */
 .site-header {
-    background-color: var(--white);
-    border-bottom: 4px solid var(--black);
+    background-color: var(--black);
+    border-bottom: 4px solid var(--theme-yellow);
     padding: 20px 0;
     position: sticky;
     top: 0;
@@ -45,15 +44,15 @@ body {
 .logo {
     font-size: 2.2rem;
     text-transform: uppercase;
-    color: var(--black);
+    /* Make VERTA white so it shows on the black header */
+    color: var(--white);
 }
 
 .logo span {
-    color: var(--safety-green);
-    -webkit-text-stroke: 1.5px var(--black);
-    text-shadow: 2px 2px 0 var(--black);
+    color: var(--theme-yellow);
 }
 
+/* Congruent Navigation Bar */
 av ul {
     list-style: none;
     display: flex;
@@ -65,20 +64,18 @@ av a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.2rem;
-    /* Exactly what you requested: Yellow text, black outline */
-    color: var(--safety-green);
-    -webkit-text-stroke: 1.5px var(--black);
-    text-shadow: 2px 2px 0 var(--black);
-    transition: transform 0.2s;
+    /* Standard yellow text without heavy styling to match */
+    color: var(--theme-yellow);
+    transition: color 0.2s;
 }
 
 av a:hover {
-    transform: scale(1.05);
+    color: var(--white);
 }
 
-/* Buttons */
+/* Buttons (for Hero and Contact Form) */
 .btn-primary, .btn-submit {
-    background-color: var(--safety-green);
+    background-color: var(--theme-yellow);
     color: var(--black);
     padding: 10px 20px;
     border: 3px solid var(--black);
@@ -94,14 +91,6 @@ av a:hover {
 .btn-primary:hover, .btn-submit:hover {
     transform: translateY(-2px);
     box-shadow: 5px 5px 0 var(--black);
-}
-
-/* Special outlined button so it matches the other text perfectly */
-.outline-btn {
-    background-color: var(--white);
-    color: var(--safety-green);
-    -webkit-text-stroke: 1.5px var(--black);
-    text-shadow: 2px 2px 0 var(--black);
 }
 
 .btn-large {
@@ -122,7 +111,7 @@ av a:hover {
 .hero h2 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    color: var(--safety-green);
+    color: var(--theme-yellow);
     -webkit-text-stroke: 2px var(--black);
     text-shadow: 3px 3px 0 var(--black);
 }
@@ -130,7 +119,7 @@ av a:hover {
 .hero p {
     font-size: 1.5rem;
     color: var(--black);
-    font-family: Arial, sans-serif; /* Softer font just for the paragraph */
+    font-family: Arial, sans-serif;
     font-weight: bold;
     margin-bottom: 30px;
     max-width: 800px;
@@ -145,7 +134,7 @@ section { padding: 80px 0; }
     font-size: 3rem;
     margin-bottom: 50px;
     text-transform: uppercase;
-    color: var(--safety-green);
+    color: var(--theme-yellow);
     -webkit-text-stroke: 2px var(--black);
     text-shadow: 3px 3px 0 var(--black);
 }
@@ -169,7 +158,7 @@ section { padding: 80px 0; }
     font-size: 1.8rem;
     margin: 15px 0;
     text-transform: uppercase;
-    color: var(--safety-green);
+    color: var(--theme-yellow);
     -webkit-text-stroke: 1.5px var(--black);
     text-shadow: 2px 2px 0 var(--black);
 }
@@ -189,7 +178,7 @@ section { padding: 80px 0; }
     align-items: center;
     justify-content: center;
     border: 3px dashed var(--black);
-    color: var(--safety-green);
+    color: var(--theme-yellow);
     -webkit-text-stroke: 1.5px var(--black);
     font-size: 2rem;
     text-shadow: 2px 2px 0 var(--black);
