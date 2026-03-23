@@ -1,0 +1,239 @@
+
+/* Variables for Safety Green & Black Theme */
+:root {
+    --safety-green: #39FF14; /* High visibility neon green */
+    --black: #0D0D0D;
+    --dark-gray: #1A1A1A;
+    --light-gray: #333333;
+    --white: #FFFFFF;
+    --text-color: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: var(--black);
+    border-bottom: 3px solid var(--safety-green);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--safety-green);
+}
+
+av ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+av a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+av a:hover {
+    color: var(--safety-green);
+}
+
+/* Buttons */
+.btn-primary, .btn-submit {
+    background-color: var(--safety-green);
+    color: var(--black);
+    padding: 10px 20px;
+    border: 2px solid var(--black);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-submit:hover {
+    background-color: var(--white);
+    border-color: var(--safety-green);
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--dark-gray);
+    /* Placeholder for future background image */
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23333"/></svg>');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 20px;
+    border-bottom: 5px solid var(--safety-green);
+}
+
+.hero h2 {
+    color: var(--safety-green);
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 var(--black);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sections Common */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--safety-green);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* Services */
+.services-section {
+    background-color: var(--black);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--dark-gray);
+    padding: 40px 30px;
+    text-align: center;
+    border: 2px solid var(--safety-green);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Portfolio */
+.portfolio-section {
+    background-color: var(--light-gray);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item.placeholder {
+    background-color: var(--dark-gray);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--safety-green);
+    color: var(--safety-green);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Contact Form */
+.contact-section {
+    background-color: var(--black);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--dark-gray);
+    border: 1px solid var(--light-gray);
+    color: var(--white);
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--safety-green);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+    border-top: 2px solid var(--safety-green);
+}
