@@ -1,7 +1,7 @@
 
 /* Variables for Safety Green & Black Theme */
 :root {
-    --safety-green: #39FF14; /* High visibility neon green */
+    --safety-green: #CCFF00; /* Highlighter yellow safety green */ /* High visibility neon green */
     --black: #0D0D0D;
     --dark-gray: #1A1A1A;
     --light-gray: #333333;
