@@ -10,12 +10,16 @@
     <!-- Header -->
     <header class="site-header">
         <div class="container">
-            <h1 class="logo">VERTA <span>MASONRY</span></h1>
+            <a href="#" class="logo">VERTA <span>MASONRY</span></a>
+            <div class="header-contact">
+                <span class="phone"><a href="tel:+15551234567">(555) 123-4567</a></span>
+                <span class="badge">Licensed & Insured</span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Our Work</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,9 +28,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>SOLID. RELIABLE. CRAFTSMANSHIP.</h2>
-            <p>Your trusted experts for everything concrete in new and existing homes.</p>
-            <a href="#contact" class="btn-primary btn-large">Discuss Your Project</a>
+            <h1>SOLID. RELIABLE. CRAFTSMANSHIP.</h1>
+            <p>Foundations, limestone porches, and flatwork for homeowners in <strong>[Your City/Region]</strong>. Built to last a lifetime.</p>
+            <a href="#contact" class="btn-primary btn-large">Get a Free Quote</a>
         </div>
     </section>
 
@@ -36,33 +40,47 @@
             <h2 class="section-title">OUR SERVICES</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="icon">🏗️</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20v-8l-2 2"/><path d="M10 20V8l-2 2"/><path d="M15 20V6l-2 2"/><path d="M20 20V4l-2 2"/></svg>
+                    </div>
                     <h3>Structural & Concrete</h3>
                     <p>Rock-solid footings, robust foundations, and flawless concrete slabs built to last forever.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">🧱</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
                     <h3>Custom Stonework</h3>
                     <p>Beautiful, eye-catching limestone steps and custom porches that instantly boost curb appeal.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">🚧</div>
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+                    </div>
                     <h3>Site Prep & Flatwork</h3>
-                    <p>Expert installations of sidewalks, curbs, alongside professional demolition services.</p>
+                    <p>Expert installations of sidewalks, curbs, and professional demolition services.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Placeholder Section -->
-    <section id="portfolio" class="portfolio-section">
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-section">
         <div class="container">
-            <h2 class="section-title">RECENT PROJECTS</h2>
-            <p style="text-align: center; color: #fff; margin-bottom: 2rem;">Gallery coming soon! We will put your best before & after photos here.</p>
-            <div class="portfolio-grid">
-                <div class="portfolio-item placeholder">Project 1</div>
-                <div class="portfolio-item placeholder">Project 2</div>
-                <div class="portfolio-item placeholder">Project 3</div>
+            <h2 class="section-title">WHY HOMEOWNERS TRUST VERTA</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <strong>10+ Years Experience</strong>
+                    <p>We have been pouring concrete and laying stone for over a decade with zero structural callbacks.</p>
+                </div>
+                <div class="why-card">
+                    <strong>Local & Licensed</strong>
+                    <p>Fully licensed and insured for your protection. We know your local codes and climate.</p>
+                </div>
+                <div class="why-card">
+                    <strong>On-Time, On-Budget</strong>
+                    <p>No hidden fees, no disappearing acts. We show up when we say we will and finish on schedule.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -71,19 +89,45 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">READY TO START YOUR PROJECT?</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email Address">
-                <textarea placeholder="Tell us about your project (e.g. Need a quote for a new limestone porch)" rows="5" required></textarea>
+            <p class="contact-lead">Call <a href="tel:+15551234567">(555) 123-4567</a> or fill out the form below for a free, no-pressure estimate.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); this.classList.add('submitted');">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" placeholder="John Smith" required>
+                
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" placeholder="(555) 123-4567" required>
+                
+                <label for="email">Email Address <span>(optional)</span></label>
+                <input id="email" type="email" placeholder="john@example.com">
+                
+                <label for="project">Project Details</label>
+                <textarea id="project" placeholder="Tell us about your project (e.g. Need a quote for a new limestone porch)" rows="5" required></textarea>
+                
                 <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                <p class="form-success">Thanks! We will call you within 24 hours.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Verta Masonry. All rights reserved.</p>
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-logo">VERTA <span>MASONRY</span></p>
+                <p>Your trusted experts for concrete and stonework.</p>
+            </div>
+            <div>
+                <p><strong>Contact</strong></p>
+                <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                <p><a href="mailto:info@vertamasonry.com">info@vertamasonry.com</a></p>
+            </div>
+            <div>
+                <p><strong>Hours</strong></p>
+                <p>Mon-Fri: 7am - 5pm</p>
+                <p>Sat: 8am - 12pm</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Verta Masonry. All rights reserved.</p>
     </footer>
 </body>
 </html>
